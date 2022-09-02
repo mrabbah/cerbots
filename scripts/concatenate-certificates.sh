@@ -23,3 +23,7 @@ fi
 if [ -f /etc/letsencrypt/live/jenkins.rabbahsoft.ma/fullchain.pem -a -f /etc/letsencrypt/live/jenkins.rabbahsoft.ma/privkey.pem ]; then
   cat /etc/letsencrypt/live/jenkins.rabbahsoft.ma/fullchain.pem /etc/letsencrypt/live/jenkins.rabbahsoft.ma/privkey.pem > /etc/certificates/jenkins.rabbahsoft.ma.pem
 fi
+
+if [ -f /etc/letsencrypt/live/minio.rabbahsoft.ma/fullchain.pem -a -f /etc/letsencrypt/live/minio.rabbahsoft.ma/privkey.pem ]; then
+  cat /etc/letsencrypt/live/minio.rabbahsoft.ma/fullchain.pem /etc/letsencrypt/live/minio.rabbahsoft.ma/privkey.pem > /etc/certificates/minio.rabbahsoft.ma.pem
+fi

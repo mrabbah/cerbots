@@ -1,6 +1,12 @@
 #!/bin/bash
 
 # Request certificates
+
+certbot certonly --standalone \
+  --non-interactive --agree-tos --email contact@rabbahsoft.ma --http-01-port=380 \
+  --cert-name minio.rabbahsoft.ma \
+  -d minio.rabbahsoft.ma
+
 certbot certonly --standalone \
   --non-interactive --agree-tos --email contact@rabbahsoft.ma --http-01-port=380 \
   --cert-name rabbahsoft.ma \
@@ -30,6 +36,7 @@ certbot certonly --standalone \
   --non-interactive --agree-tos --email contact@rabbahsoft.ma --http-01-port=380 \
   --cert-name jenkins.rabbahsoft.ma \
   -d jenkins.rabbahsoft.ma
+
 
 # Concatenate certificates
 . /etc/scripts/concatenate-certificates.sh
